@@ -1,0 +1,90 @@
+//element覆盖样式
+body {
+  .el-input-number {
+    border-radius: 0;
+    .el-input-number__decrease,
+    .el-input-number__increase {
+      background: $bg;
+      border-radius: 0;
+    }
+    .el-input {
+      border-radius: 0;
+      > input {
+        border-radius: 0;
+      }
+    }
+  }
+  .el-dialog {
+    .el-dialog__header {
+      padding-bottom: 20px;
+      .el-dialog__title {
+        font-weight: bold;
+        color: $font-color-dark;
+      }
+      .el-dialog__headerbtn {
+        font-size: 20px;
+        .el-dialog__close {
+          color: $font-color-dark;
+          &:hover {
+            color: $--color-primary;
+          }
+        }
+      }
+    }
+    .el-dialog__body {
+      padding: 0 40px;
+      min-height: 116px;
+    }
+    .el-dialog__footer {
+      padding-top: 20px;
+      .dialog-footer {
+        text-align: left;
+      }
+    }
+  }
+
+  .el-col--1{//inline 时候用
+    width:0;
+    transform: translateX(-8px);
+  }
+  .el-col--2{//自动撑开用
+    width:auto;
+    padding:0!important;
+  }
+  .el-col--3{//gutter 为10px 时候用
+    width:0;
+    transform: translateX(-3px);
+    padding: 0;
+  }
+
+  .el-breadcrumb__inner.is-link, .el-breadcrumb__inner a{
+    font-weight: normal;
+  }
+
+  .el-table__body tr.hover-row > td, .el-table__body tr.hover-row.current-row > td, .el-table__body tr.hover-row.el-table__row--striped > td, .el-table__body tr.hover-row.el-table__row--striped.current-row > td {
+    background-color: $table-hover-color;
+  }
+
+  .el-table{
+    .el-form-item{
+      margin:0;
+    }
+    .el-form-item__error{
+      position: relative;
+      top:-3px;
+    }
+  }
+
+
+}
+
+.el-form-item {
+  margin-bottom: 20px;
+}
+
+.el-form-item.is-success .el-input__inner,
+.el-form-item.is-success .el-input__inner:focus,
+.el-form-item.is-success .el-textarea__inner,
+.el-form-item.is-success .el-textarea__inner:focus {
+  border-color: $border-color-primary;
+}
